@@ -7,6 +7,7 @@ import SearchModel from "../components/SearchModel";
 import ProductCard from "../components/ProductCard";
 import { useNavigation } from "@react-navigation/native";
 import Footer from "../components/Footer";
+import Heading from "../components/Heading";
 
 const categories = [
   {
@@ -53,7 +54,7 @@ const products = [
   {
     price: 900,
     stock: 60,
-    name: "Lenovo Pad 2025",
+    name: "Lenovo ThinkPad 2025",
     _id: "2",
     images: [{
       url: "https://cdn.pixabay.com/photo/2021/11/05/11/08/laptop-6771039_1280.jpg",
@@ -89,7 +90,7 @@ const Home = () => {
       <View style={defaultStyle}>
         <Header />
 
-        {/* Heading */}
+        {/* Heading Row */}
         <View
           style={{
             paddingTop: 70,
@@ -98,10 +99,8 @@ const Home = () => {
             alignItems: "center",
           }}
         >
-          <View>
-            <Text style={{ fontSize: 25 }}>Our</Text>
-            <Text style={{ fontSize: 25, fontWeight: "900" }}>Products</Text>
-          </View>
+          {/* Heading */}
+          <Heading text1="Our" text2="Products" />
 
           {/* Search Bar */}
           <View>
