@@ -12,52 +12,54 @@ import Heading from "../components/Heading";
 const categories = [
   {
     category: "Nike",
-    _id: "1",
+    _id: "cncwoncwo",
   },
   {
     category: "Adidas",
-    _id: "2",
+    _id: "wwpedw",
   },
   {
     category: "Puma",
-    _id: "3",
+    _id: "wcvj",
   },
   {
     category: "Lacoste",
-    _id: "4",
+    _id: "efplsc",
   },
   {
     category: "Milk",
-    _id: "5",
+    _id: "ldcdwwvw",
   },
   {
     category: "Riz",
-    _id: "6",
+    _id: "wrivbvvbcfbvbfvvif",
   },
   {
     category: "Haricot",
-    _id: "7",
+    _id: "ewckwvrjvvreuv",
   },
 ];
 
-const products = [
+export const products = [
   {
     price: 1200,
     stock: 23,
     name: "Macbook M1 Pro",
-    _id: "1",
+    _id: "dswdcwwdvf",
+    category: "LapTop",
     images: [{
       url: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-space-m1-2021?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1638575247000",
     }],
   },
 
   {
-    price: 900,
-    stock: 60,
-    name: "Lenovo ThinkPad 2025",
-    _id: "2",
+    price: 1200,
+    stock: 23,
+    name: "Macbook M1 Pro",
+    _id: "dswdcwaeafevwdvf",
+    category: "IDK",
     images: [{
-      url: "https://cdn.pixabay.com/photo/2021/11/05/11/08/laptop-6771039_1280.jpg",
+      url: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-space-m1-2021?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1638575247000",
     }],
   },
 ];

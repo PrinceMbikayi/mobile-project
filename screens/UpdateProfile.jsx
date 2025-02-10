@@ -51,7 +51,6 @@ const UpdateProfile = ({ navigation }) => {
             {...inputOptions}
             placeholder="Name"
             value={name}
-            keyboardType="email-address"
             onChangeText={setName}
           />
 
