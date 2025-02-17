@@ -9,10 +9,10 @@ import {
 import Header from "../../components/Header";
 import Loader from "../../components/Loader";
 import { Avatar, Button, TextInput } from "react-native-paper";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SelectComponent from "../../components/SelectComponent";
 
-const NewProduct = ({ navigation }) => {
+const NewProduct = ({ navigation, route }) => {
   const loading = false;
 
   const [image, setImage] = useState("");
@@ -32,6 +32,12 @@ const NewProduct = ({ navigation }) => {
   const submitHandler = () => {
     console.log(name, desc, price, stock, categoryID);
   };
+
+  useEffect(() => {
+    if (route.params?.image) {
+      setImage(route.params.image);
+    }
+  }, [route.params]);
 
   return (
     <>
@@ -81,15 +87,20 @@ const NewProduct = ({ navigation }) => {
                 />
                 <TouchableOpacity
                   onPress={() =>
-                    navigation.navigate("camera", { NewProduct: true })
+                    navigation.navigate("camera", { newProduct: true })
                   }
                 >
-                    <Avatar.Icon icon={"camera"} size={30} color={colors.color3} style={{
-                        backgroundColor: colors.color2,
-                        position: "absolute",
-                        bottom: 0,
-                        right: -5,
-                    }} />
+                  <Avatar.Icon
+                    icon={"camera"}
+                    size={30}
+                    color={colors.color3}
+                    style={{
+                      backgroundColor: colors.color2,
+                      position: "absolute",
+                      bottom: 0,
+                      right: -5,
+                    }}
+                  />
                 </TouchableOpacity>
               </View>
 

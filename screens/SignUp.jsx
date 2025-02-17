@@ -7,11 +7,11 @@ import {
   formStyles as styles,
   defaultImg,
 } from "../style/style";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Avatar, Button, TextInput } from "react-native-paper";
 import Footer from "../components/Footer";
 
-const SignUp = ({ navigation }) => {
+const SignUp = ({ navigation, route }) => {
   const [avatar, setAvatar] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -29,6 +29,12 @@ const SignUp = ({ navigation }) => {
   const submitHandler = () => {
     alert("Yeah");
   };
+
+  useEffect(() => {
+    if (route.params?.image) {
+      setAvatar(route.params.image);
+    }
+  }, [route.params]);
 
   return (
     <>
